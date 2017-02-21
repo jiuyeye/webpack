@@ -2,7 +2,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var Hello = React.createClass({
   render: function render() {
-    return <div>Hello {this.props.name}</div>;
+    return <div>Helloddd {this.props.name}</div>;
   }
 });
 
