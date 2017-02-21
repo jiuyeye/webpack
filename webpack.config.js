@@ -1,36 +1,19 @@
-var webpack = require('webpack');
-
+var htmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: {
-      1:'./src/1.js',
-      2:'./src/2.js',
-      react1:'./src/react1.js',
-      vendor: [
-          'react',
-          'react-dom'
-        ]
+      helloWorld:'./webpack04/helloWorld.js',
   },
   output: {
-    path: './dist/',
-    filename: '[name].js',
-    publicPath: '/dist'
-  },
-  module: {
-    loaders: [{
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel',
-        query: {
-            presets: ['es2015', 'stage-0', 'react']
-        }
-    }]
-    },
-    plugins: [
-      new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js")
-    ],
-devServer: {
-  hot: true,
-  inline: true
-}
-
+    path: './webpack04',
+    filename: 'js/[name]-bundle.js',
+	},
+	plugins:[
+		new htmlWebpackPlugin({
+			filename:"index.html",//文件名
+			template:"index.html",//模板
+			inject:"head",//嵌入位置
+			title:"webpack test demo",//自定义参数变量
+			date:new Date()
+		})
+	]
 }
