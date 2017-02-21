@@ -6,9 +6,11 @@
 </head>
 <body>
 	<%=htmlWebpackPlugin.options.date%>
+	<!-- files -->
 	<% for(var i in htmlWebpackPlugin.files){ %>
 		<%=i%>:<%=htmlWebpackPlugin.files[i]%>
 	<% }%>
+	<!-- options -->
 	<% for(var i in htmlWebpackPlugin.options){ %>
 		<%=i%>:<%=htmlWebpackPlugin.options[i]%>
 	<% }%>
