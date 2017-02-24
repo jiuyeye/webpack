@@ -1,9 +1,7 @@
-var path = require("path");
-var divlayer = require("../webpack05/layer/layer.js");
+import '../webpack05/layer/common.css';
+import divlayer from "../webpack05/layer/layer.js";
 
 const App = function(){
-    const Num = 1;
-    alert(Num);
     console.log(divlayer);
 };
 new App();

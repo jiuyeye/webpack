@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors Your Name (you@example.org)
+ * @date    2017-02-24 15:06:34
+ * @version $Id$
+ */
+html,body{
+    padding:0;
+    font-size: 12px;
+    background: #ff0;
+}
+ul,li{
+    list-style:none
+}
+@import "flex.sass"

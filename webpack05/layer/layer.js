@@ -1,8 +1,8 @@
 // import tpl from "./layer.html";
-function layers(){
+function layer(){
     return {
         name:"layer",
         // tpl:tpl,
     };
 }
-export layers;
+export default layer;
