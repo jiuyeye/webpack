@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	__webpack_require__(1);
 
@@ -55,7 +55,9 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var App = function App() {
-	    console.log(_layer2.default);
+	    var dom = document.getElementById('appdiv');
+	    var layer = new _layer2.default();
+	    dom.innerHTML = layer.tpl;
 	};
 	new App();
 
@@ -164,7 +166,7 @@
 
 
 	// module
-	exports.push([module.id, ".flex-div{\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    .child-div{\r\n        widht:100;\r\n    }\r\n}", ""]);
+	exports.push([module.id, ".flex-div{\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n}", ""]);
 
 	// exports
 
@@ -423,20 +425,33 @@
 
 /***/ },
 /* 6 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
-	// import tpl from "./layer.html";
+
+	var _layer = __webpack_require__(7);
+
+	var _layer2 = _interopRequireDefault(_layer);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 	function layer() {
 	    return {
-	        name: "layer"
+	        name: "layer",
+	        tpl: _layer2.default
 	    };
 	}
 	exports.default = layer;
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"flex-div\">\r\n    <div>This is layer</div>\r\n</div>";
 
 /***/ }
 /******/ ]);

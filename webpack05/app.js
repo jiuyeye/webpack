@@ -1,7 +1,9 @@
 import '../webpack05/layer/common.css';
-import divlayer from "../webpack05/layer/layer.js";
+import Layer from "../webpack05/layer/layer.js";
 
 const App = function(){
-    console.log(divlayer);
+    var dom = document.getElementById('appdiv');
+    var layer = new Layer;
+    dom.innerHTML=layer.ejstpl;
 };
 new App();
