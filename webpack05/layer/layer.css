@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/**
+ *
+ * @authors Your Name (you@example.org)
+ * @date    2017-02-23 10:45:27
+ * @version $Id$
+ */
+.layer{
+    width:100px;
+    height: 100px;
+    background-color: #ff0;
+}
+.layer div{
+    width:80px;
+    height:80px;
+    background-color: #000
+}
